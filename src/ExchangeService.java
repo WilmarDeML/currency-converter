@@ -5,7 +5,7 @@ import com.google.gson.JsonParser;
 import java.io.IOException;
 
 public class ExchangeService {
-    private static final String API_KEY = "442d7f7c9bb245f6adea0af1";
+    private static final String API_KEY = "[yourApiKey]";
     private static final String BASE_URI = "https://v6.exchangerate-api.com/v6/";
     private static String baseCode = "COP";
     private static JsonObject rates;
