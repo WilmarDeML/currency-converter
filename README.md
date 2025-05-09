@@ -66,14 +66,23 @@ private static final String API_KEY = "tu-key-aquí";
 ```
 
 ## 🖥️ Uso
-1. Seleccionar moneda base (ej: COP)
-2. Ingresar cantidad a convertir
-3. Elegir moneda destino (ej: USD)
-4. Ver resultado de conversión
-5. Opciones posteriores:
-   - Nueva conversión (1)
-   - Cambiar base (2)
-   - Salir (9)
+1. Seleccionar moneda base (ej: COP) también puede ser en minúsculas<br>
+   ![image](https://github.com/user-attachments/assets/59f771e1-95b0-41ab-bb20-81bac34cce17)
+2. Ingresar cantidad a convertir<br>
+   ![image](https://github.com/user-attachments/assets/0b132764-e1b5-4fda-a713-4e67bd3dd89f)
+3. Elegir moneda destino (ej: USD)<br>
+   ![image](https://github.com/user-attachments/assets/51acb11b-6334-4c2e-b0e1-22bc9486cd91)
+4. Ver resultado de conversión<br>
+   ![image](https://github.com/user-attachments/assets/ede51108-8842-41e4-b1ee-d16bb4560196)
+5. Opciones posteriores:<br>
+    ![image](https://github.com/user-attachments/assets/c863cc00-90cf-46b4-b294-75374db53f94)
+   - Convertir otro valor con la misma base [BASE] (1)<br>
+     ![image](https://github.com/user-attachments/assets/07b4af5e-7aa3-4c32-884e-48c364ad008e)
+   - Cambiar base (2)<br>
+     ![image](https://github.com/user-attachments/assets/7fd3fb4f-6878-4cc5-b060-2d3b4255dc40)
+   - Salir (9)<br>
+     ![image](https://github.com/user-attachments/assets/5a2f8d9c-229e-4395-912c-37aca11cb46b)
+
 
 ## 🏗️ Estructura del Código
 | Archivo | Responsabilidad |
