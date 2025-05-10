@@ -1,12 +1,17 @@
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainService {
 
     // Scanner global utilizado para leer la entrada del usuario
     private static final Scanner scanner = new Scanner(System.in);
-
+    // history para guardar información de cada conversión realizada
+    private static final List<String> history = new ArrayList<>();
     /**
      * Ejecuta el ciclo principal del conversor de moneda.
      * Permite al usuario seleccionar una moneda base, ingresar un valor,
@@ -30,9 +35,30 @@ public class MainService {
             // Realiza la conversión
             double result = ExchangeService.convertAmountByCode(targetCurrency, amount);
             showConversionResult(amount, baseCurrency, result, targetCurrency);
+            addToHistory(amount, result, baseCurrency, targetCurrency);
 
             option = askNextAction(baseCurrency); // siguiente paso del usuario
         }
+    }
+
+    /**
+     * Agrega la información de una conversión realizada al historial
+     * @param amount monto convertido
+     * @param result resultado de la conversión
+     * @param baseCurrency mondeda base
+     * @param targetCurrency moneda destino
+     */
+    private static void addToHistory(double amount, double result, String baseCurrency, String targetCurrency) {
+        var now = LocalDateTime.now();
+        var formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+        String convertion = String.format(
+                "%s - Convertiste %.2f [%s] a [%s] ===> %.2f",
+                now.format(formatter),
+                amount, baseCurrency, targetCurrency, result
+        );
+
+        history.add(convertion);
     }
 
     /**
@@ -163,5 +189,15 @@ public class MainService {
     public static void exitMessage() {
         System.out.println("Gracias por usar nuestro servicio!");
         System.out.println("**********************************************************");
+    }
+
+    /**
+     * Muestra el historial de conversiones hechas en la sesión
+     */
+    public static void showHistory() {
+        System.out.println();
+        System.out.println("*********************** Historial **************************************");
+        history.forEach(System.out::println);
+        System.out.println("************************************************************************");
     }
 }

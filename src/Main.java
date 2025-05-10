@@ -8,6 +8,7 @@ public class Main {
             if (ExchangeService.getRates() != null) {
                 MainService.runCurrencyConverter();
             }
+            MainService.showHistory();
             MainService.exitMessage();
         } catch (IOException | InterruptedException e) {
             System.out.println("Error en el servidor de la API: " + e.getLocalizedMessage());
