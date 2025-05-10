@@ -30,6 +30,7 @@ Aplicación Java CLI para conversión monetaria en tiempo real usando [ExchangeR
 | Gestión de moneda base | Permite cambiar la moneda de referencia |
 | Validación de inputs | Controla errores en entradas |
 | Listado completo | Muestra todas las divisas disponibles |
+| Historial | Muestra todas las conversiones hechas de cada sesión |
 
 ## 💻 Tecnologías Utilizadas
 ```java
@@ -82,6 +83,9 @@ private static final String API_KEY = "tu-key-aquí";
      ![image](https://github.com/user-attachments/assets/7fd3fb4f-6878-4cc5-b060-2d3b4255dc40)
    - Salir (9)<br>
      ![image](https://github.com/user-attachments/assets/5a2f8d9c-229e-4395-912c-37aca11cb46b)
+   - Después de salir muestra el historial<br>
+     ![image](https://github.com/user-attachments/assets/ede00fbe-c2da-4238-b39e-beef696659e3)
+
 
 
 ## 🏗️ Estructura del Código
