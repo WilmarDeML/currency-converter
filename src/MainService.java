@@ -195,7 +195,6 @@ public class MainService {
      * Muestra el historial de conversiones hechas en la sesión
      */
     public static void showHistory() {
-        System.out.println();
         System.out.println("*********************** Historial **************************************");
         history.forEach(System.out::println);
         System.out.println("************************************************************************");
